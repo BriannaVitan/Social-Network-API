@@ -1,10 +1,10 @@
 import { Router } from 'express';
-import { courseRouter } from './courseRoutes.js';
-import { studentRouter } from './studentRoutes.js';
+import userRoutes from './thoughtRoutes.js';
+import  thoughtRoutes from './userRoutes.js';
 
 const router = Router();
 
-router.use('/courses', courseRouter);
-router.use('/students', studentRouter);
+router.use('/thought', thoughtRoutes);
+router.use('/user', userRoutes);
 
 export default router;
