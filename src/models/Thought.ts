@@ -1,5 +1,5 @@
 import { Schema, model, Document } from 'mongoose';
-import ReactionSchema from './Reaction';
+import ReactionSchema from './Reaction.js';
 
 interface IThought extends Document {
     thoughtText: string,

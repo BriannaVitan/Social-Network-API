@@ -59,21 +59,16 @@ export const createThought = async (req: Request, res: Response) => {
  * @returns an updated thought
 */
 
-export const updateThought = async (req: Request, res: Response) => {
+
+export const updateThought = async (req:Request, res: Response) => {
   try {
-    const thought = await Thought.findByIdAndUpdate(req.params.thoughtId, req.body, {
-      new: true,
-      runValidators: true,
-    });
-    if (!thought) {
-      res.status(404).json({ message: 'No thought found with this ID :(' });
-      return;
-    }
-    res.status(200).json(thought);
+    const user = await Thought.findByIdAndUpdate({ _id: req.params.userId }, req.body, {new: true});
+    res.status(200).json(user);
   } catch (err) {
     res.status(500).json(err);
   }
-};
+}
+
 
   /**
  * DELETE Course based on id /thought/:id
