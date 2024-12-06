@@ -19,14 +19,15 @@
 
   <p align="center">
   <!--  Edit App description -->
-    This applican
+    This social network application is built from scratch using API'S. Users can share their thoughts, react to friend's thoughts, create a friend list, and remove friends or thoughts. I used Express.js for routing, MonogoDB to store my database, Mongoose ODM, and Insomnia for the video. 
 <!-- PROJECT LOGO -->
 <br />
     <a href="https://github.com/BriannaVitan/Social-Network-API"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <!-- Edit deployment link -->
-    <a href="">View Demo(Coming Soon)</a>
+    <a href="https://drive.google.com/file/d/146-DgIhz8NoxZbCiIisfEf2StTsWHIvA/view?usp=drive_link
+">Video Demo</a>
     ·
     <a href="https://github.com/BriannaVitan/Social-Network-API/issues">Report Bug</a>
     ·
@@ -52,11 +53,10 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#project-link">Project Link</a></li>
   </ol>
 </details>
 
@@ -70,7 +70,7 @@
 <!-- Add video demos using the following format: -->
 <!-- ![Video alt description](directPathOfVideos) -->
 
-This project was built using Insomnia or Postman, MongoDB, Node, Express, and Mongoose.
+This project was built using Insomnia, MongoDB, Node, Express, and Mongoose.
 
 ### Built With
 
@@ -124,7 +124,7 @@ npm run build
 4. Launch the app in development environment
 
 ```
-npm run start
+npm start dev
 ```
 
 5. Visit app:
@@ -135,7 +135,9 @@ npm run start
 
 See the [open issues](https://github.com/BriannaVitan/Social-Network-API/issues) for a full list of proposed features (and known issues).
 
-
+## Usage 
+[Video Demo](https://drive.google.com/file/d/146-DgIhz8NoxZbCiIisfEf2StTsWHIvA/view?usp=drive_link)
+![alt text](Social-Network-API.png)
 <!-- CONTRIBUTING -->
 
 ## Contributing
@@ -162,12 +164,11 @@ This project is licensed under the MIT license.
 
 
 
-Project Links:
+## Project Links:
 
 [Github Repository](https://github.com/BriannaVitan/Social-Network-API)
 
 <!-- add your deployment link here -->
 
-[Deployment]()
 
 

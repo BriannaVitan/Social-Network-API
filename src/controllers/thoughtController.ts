@@ -81,8 +81,8 @@ export const deleteThought = async (req: Request, res: Response) => {
       return res.status(404).json({ message: 'No thought with this id!' });
     }
     const user = await User.findOneAndUpdate(
-      { thoughts: req.params.thoughtId },
-      { $pull: { thoughts: req.params.thoughtId } },
+      { thought: req.params.thoughtId },
+      { $pull: { thought: req.params.thoughtId } },
       { new: true }
     );
     if (!user) {
@@ -130,8 +130,8 @@ export const addReaction = async (req: Request, res: Response) => {
 export const removeReaction = async (req: Request, res: Response) => {
   try {
       const thought = await Thought.findOneAndUpdate(
-          { 'reactions.reactionId': req.params.reactionId  },
-          { $pull: { reactions: { reactionId: req.params.reactionId } } },
+          { 'reaction.reactionId': req.params.reactionId  },
+          { $pull: { reaction: { reactionId: req.params.reactionId } } },
           { runValidators: true, new: true }
       );
       if (!thought) {
