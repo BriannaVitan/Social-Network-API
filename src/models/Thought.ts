@@ -1,13 +1,11 @@
 import { Schema, model, Document } from 'mongoose';
 import ReactionSchema from './Reaction.js';
-
 interface IThought extends Document {
     thoughtText: string,
     createdAt: Schema.Types.Date,
     username: string,
     reactions: [typeof ReactionSchema]
 }
-
 const thoughtSchema = new Schema<IThought>({
     thoughtText: {
         type: String,
@@ -33,11 +31,8 @@ const thoughtSchema = new Schema<IThought>({
         timestamps: true
     }
 );
-
 thoughtSchema.virtual('reactionCount').get(function(){
     return this.reactions.length
 })
-
 const Thought = model('Thought', thoughtSchema);
-
 export default Thought;

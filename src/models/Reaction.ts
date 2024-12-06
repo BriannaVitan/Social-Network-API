@@ -1,12 +1,10 @@
 import { Schema,  Document, Types} from 'mongoose';
-
 interface IReaction extends Document {
     reactionId: Schema.Types.ObjectId,
     reactionBody: string,
     username: string,
     createdAt: Schema.Types.Date
 }
-
 const ReactionSchema = new Schema<IReaction>(
     {
         reactionId: {
@@ -34,5 +32,4 @@ const ReactionSchema = new Schema<IReaction>(
         _id: false
     }
 );
-
 export default ReactionSchema;
