@@ -127,21 +127,40 @@ export const addReaction = async (req: Request, res: Response) => {
 * @param string userId
 * @returns removes a Reaction
 */
+// export const removeReaction = async (req: Request, res: Response) => {
+//   try {
+//       const thought = await Thought.findOneAndUpdate(
+//           { 'reaction.reactionId': req.params.reactionId  },
+//           { $pull: { reaction: { reactionId: req.params.reactionId } } },
+//           { runValidators: true, new: true }
+//       );
+//       if (!thought) {
+//           return res
+//               .status(404)
+//               .json({ message: 'No thought found with that ID :(' });
+//       }
+//       return res.json(thought);
+//   } catch (err) {
+//       return res.status(500).json(err);
+//   }
+// }
 export const removeReaction = async (req: Request, res: Response) => {
   try {
-      const thought = await Thought.findOneAndUpdate(
-          { 'reaction.reactionId': req.params.reactionId  },
-          { $pull: { reaction: { reactionId: req.params.reactionId } } },
-          { runValidators: true, new: true }
-      );
-      if (!thought) {
-          return res
-              .status(404)
-              .json({ message: 'No thought found with that ID :(' });
-      }
-      return res.json(thought);
+    const thought = await Thought.findOneAndUpdate(
+      { 'reactions.reactionId': req.params.reactionId }, // Match the reactionId within reactions array
+      { $pull: { reactions: { reactionId: req.params.reactionId } } },
+        { runValidators: true, new: true }
+    );
+
+    if (!thought) {
+      return res.status(404).json({ message: 'No thought with this id!' });
+    }
+
+    res.json(thought);
+    return;
   } catch (err) {
-      return res.status(500).json(err);
+    res.status(500).json(err);
+    return;
   }
 }
 export default Thought;

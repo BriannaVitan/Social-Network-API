@@ -19,7 +19,7 @@
 
   <p align="center">
   <!--  Edit App description -->
-    This social network application is built from scratch using API'S. Users can share their thoughts, react to friend's thoughts, create a friend list, and remove friends or thoughts. I used Express.js for routing, MonogoDB to store my database, Mongoose ODM, and Insomnia for the video. 
+    This project is a RESTful API designed for a social networking platform, built using Express.js for routing and MongoDB for the database, with Mongoose as the ODM. The API allows users to interact with the platform by sharing thoughts, reacting to others' thoughts, and maintaining a friend list. The application is designed to handle large amounts of unstructured data efficiently, making it an ideal backend solution for a modern social networking site. That feature User Management to create, update, and delete users, thoughts, reactions, and friendsList from the platform
 <!-- PROJECT LOGO -->
 <br />
     <a href="https://github.com/BriannaVitan/Social-Network-API"><strong>Explore the docs »</strong></a>
@@ -137,7 +137,8 @@ See the [open issues](https://github.com/BriannaVitan/Social-Network-API/issues)
 
 ## Usage 
 [Video Demo](https://drive.google.com/file/d/146-DgIhz8NoxZbCiIisfEf2StTsWHIvA/view?usp=drive_link)
-![alt text](Social-Network-API.png)
+
+![alt text](Assets/Social-Network-API.png)
 <!-- CONTRIBUTING -->
 
 ## Contributing
